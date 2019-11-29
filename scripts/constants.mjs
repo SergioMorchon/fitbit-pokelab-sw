@@ -10,3 +10,4 @@ export const dataPath = join(
 
 export const resourcesPath = join(process.cwd(), "resources");
 export const appPath = join(process.cwd(), "app");
+export const scriptsPath = join(process.cwd(), "scripts");

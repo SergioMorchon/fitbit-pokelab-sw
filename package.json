@@ -12,7 +12,7 @@
   "fitbit": {
     "appUUID": "d8e1ca84-1b02-4ac8-8e47-f18c98888895",
     "appType": "app",
-    "appDisplayName": "PokeLAB SW",
+    "appDisplayName": "PokéLAB SW",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
@@ -22,17 +22,23 @@
       "gemini",
       "mira"
     ],
-    "i18n": {},
+    "i18n": {
+      "en-US": {
+        "name": "PokéLAB SW"
+      },
+      "es-ES": {
+        "name": "PokéLAB SW"
+      }
+    },
     "defaultLanguage": "en-US"
   },
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit",
-    "update-respurces": "node --experimental-modules scripts/update-resources.mjs",
-    "generate-names": "node --experimental-modules scripts/generate-names.mjs",
-    "postinstall": "npm run update-resources"
+    "update:resources": "node --experimental-modules scripts/update-resources.mjs",
+    "postinstall": "npm run update:resources"
   },
   "dependencies": {
-    "pokelab-sw": "^1.0.3"
+    "pokelab-sw": "^1.0.4"
   }
 }

@@ -1,9 +1,12 @@
-.tile-list-item {
-  height: 80;
-}
-
-.tile-list-item text {
-  height: 32;
+text {
   font-family: System-Regular;
   fill: "white";
+}
+
+.main-nav-button {
+  height: 32;
+}
+
+.tile-list-item {
+  height: 80;
 }

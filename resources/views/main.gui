@@ -1,0 +1,5 @@
+<svg>
+    <rect id="pokedex" class="main-nav-button" pointer-events="visible">
+        <text>_Pokedex</text>
+    </rect>
+</svg>

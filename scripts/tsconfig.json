@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "es6",
+    "moduleResolution": "node",
     "allowJs": true,
-    "types": ["node"]
+    "noEmit": true
   }
 }

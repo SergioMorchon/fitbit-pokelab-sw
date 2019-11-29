@@ -1,0 +1,33 @@
+<svg>
+  <defs>
+    <symbol id="my-tile-item" href="#tile-list-item" focusable="false"
+            pointer-events="none" system-events="all" display="none">
+
+      <text id="national-id" text-length="5" font-size="20" />
+      <text id="name" x="$+20" text-length="15" font-size="24" />
+      <g transform="translate(15,30)">
+        <text id="type-1" text-length="15" font-size="18" />
+        <text id="type-2" x="$+15" text-length="15" font-size="18" />
+      </g>
+
+      <rect id="tile-divider-bottom" class="tile-divider-bottom" />
+      <rect id="touch-me" pointer-events="all" x="0" y="0" width="100%" height="100%-2" opacity="0" />
+    </symbol>
+  </defs>
+  <use id="my-list" href="#tile-list">
+    <var id="virtual" value="1" />
+    <var id="separator-height-bottom" value="2" />
+    <use id="pokemon-list" href="#tile-list-pool">
+      <use id="pokemon-list[0]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[1]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[2]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[3]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[4]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[5]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[6]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[7]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[8]" href="#my-tile-item" class="tile-list-item" />
+      <use id="pokemon-list[9]" href="#my-tile-item" class="tile-list-item" />
+    </use>
+  </use>
+</svg>

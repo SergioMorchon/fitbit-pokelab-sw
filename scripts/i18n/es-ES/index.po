@@ -1,0 +1,2 @@
+msgid "Pokedex"
+msgstr "Pokédex"
