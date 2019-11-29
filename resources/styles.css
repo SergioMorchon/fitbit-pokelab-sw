@@ -1,0 +1,9 @@
+.tile-list-item {
+  height: 80;
+}
+
+.tile-list-item text {
+  height: 32;
+  font-family: System-Regular;
+  fill: "white";
+}
