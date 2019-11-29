@@ -7,7 +7,7 @@ Roca
 Bicho
 Fantasma
 Acero
-FUego
+Fuego
 Agua
 Planta
 Eléctrico

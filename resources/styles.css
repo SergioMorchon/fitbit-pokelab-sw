@@ -1,12 +1,8 @@
 text {
-  font-family: System-Regular;
-  fill: "white";
-}
-
-.main-nav-button {
-  height: 32;
+	font-family: System-Regular;
+	fill: 'white';
 }
 
 .tile-list-item {
-  height: 80;
+	height: 80;
 }

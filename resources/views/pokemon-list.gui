@@ -1,13 +1,17 @@
 <svg>
   <defs>
+    <link rel="import" href="../components/type.gui" />
+
     <symbol id="my-tile-item" href="#tile-list-item" focusable="false"
             pointer-events="none" system-events="all" display="none">
 
-      <text id="national-id" text-length="5" font-size="20" />
-      <text id="name" x="$+20" text-length="15" font-size="24" />
-      <g transform="translate(15,30)">
-        <text id="type-1" text-length="15" font-size="18" />
-        <text id="type-2" x="$+15" text-length="15" font-size="18" />
+      <g transform="translate(0, 0)">
+        <text id="national-id" text-length="5" font-size="20" />
+        <text id="name" x="$+20" text-length="15" font-size="24" />
+      </g>
+      <g transform="translate(0, 60)">
+        <use href="#type" id="type-1" x="0" />
+        <use href="#type" id="type-2" x="50%" />
       </g>
 
       <rect id="tile-divider-bottom" class="tile-divider-bottom" />

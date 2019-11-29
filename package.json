@@ -1,44 +1,45 @@
 {
-  "name": "fitbit-pokelab-sw",
-  "version": "0.1.0",
-  "private": true,
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "@fitbit/sdk": "~4.0.1",
-    "@fitbit/sdk-cli": "^1.7.0",
-    "@types/node": "^12.12.14",
-    "fitbit-sdk-types": "^4.2.0"
-  },
-  "fitbit": {
-    "appUUID": "d8e1ca84-1b02-4ac8-8e47-f18c98888895",
-    "appType": "app",
-    "appDisplayName": "PokéLAB SW",
-    "iconFile": "resources/icon.png",
-    "wipeColor": "#ffffff",
-    "requestedPermissions": [],
-    "buildTargets": [
-      "higgs",
-      "meson",
-      "gemini",
-      "mira"
-    ],
-    "i18n": {
-      "en-US": {
-        "name": "PokéLAB SW"
-      },
-      "es-ES": {
-        "name": "PokéLAB SW"
-      }
-    },
-    "defaultLanguage": "en-US"
-  },
-  "scripts": {
-    "build": "fitbit-build",
-    "debug": "fitbit",
-    "update:resources": "node --experimental-modules scripts/update-resources.mjs",
-    "postinstall": "npm run update:resources"
-  },
-  "dependencies": {
-    "pokelab-sw": "^1.0.4"
-  }
+	"name": "fitbit-pokelab-swsw",
+	"version": "0.1.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@fitbit/sdk": "~4.0.1",
+		"@fitbit/sdk-cli": "^1.7.0",
+		"@types/node": "^12.12.14",
+		"fitbit-sdk-types": "^4.2.0",
+		"prettier": "^1.19.1"
+	},
+	"fitbit": {
+		"appUUID": "d8e1ca84-1b02-4ac8-8e47-f18c98888895",
+		"appType": "app",
+		"appDisplayName": "PokéLAB SW/SH",
+		"iconFile": "resources/icon.png",
+		"wipeColor": "#ffffff",
+		"requestedPermissions": [],
+		"buildTargets": [
+			"higgs",
+			"meson",
+			"gemini",
+			"mira"
+		],
+		"i18n": {
+			"en-US": {
+				"name": "PokéLAB SW/SH"
+			},
+			"es-ES": {
+				"name": "PokéLAB SW/SH"
+			}
+		},
+		"defaultLanguage": "en-US"
+	},
+	"scripts": {
+		"build": "fitbit-build",
+		"debug": "fitbit",
+		"update:resources": "node --experimental-modules scripts/update-resources.mjs",
+		"postinstall": "npm run update:resources"
+	},
+	"dependencies": {
+		"pokelab-sw": "^1.0.4"
+	}
 }

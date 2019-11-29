@@ -1,0 +1,15 @@
+<svg>
+	<symbol id="type">
+		<g>
+			<rect x="0" y="0" id="square" height="10" width="10" />
+			<text
+				x="$+5"
+				y="10"
+				id="text"
+				fill="white"
+				font-size="20"
+				text-length="15"
+			/>
+		</g>
+	</symbol>
+</svg>
