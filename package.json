@@ -40,6 +40,6 @@
 		"postinstall": "npm run update:resources"
 	},
 	"dependencies": {
-		"pokelab-sw": "^1.0.4"
+		"pokelab-sw": "^1.0.5"
 	}
 }

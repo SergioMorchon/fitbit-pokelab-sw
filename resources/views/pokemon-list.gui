@@ -5,14 +5,9 @@
     <symbol id="my-tile-item" href="#tile-list-item" focusable="false"
             pointer-events="none" system-events="all" display="none">
 
-      <g transform="translate(0, 0)">
-        <text id="national-id" text-length="5" font-size="20" />
-        <text id="name" x="$+20" text-length="15" font-size="24" />
-      </g>
-      <g transform="translate(0, 60)">
-        <use href="#type" id="type-1" x="0" />
-        <use href="#type" id="type-2" x="50%" />
-      </g>
+      <text id="name" x="6" text-length="15" font-size="48" />
+      <use href="#type" id="type-1" x="0" y="100" />
+      <use href="#type" id="type-2" x="50%" y="100" />
 
       <rect id="tile-divider-bottom" class="tile-divider-bottom" />
       <rect id="touch-me" pointer-events="all" x="0" y="0" width="100%" height="100%-2" opacity="0" />

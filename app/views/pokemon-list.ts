@@ -21,7 +21,6 @@ VTList.delegate = {
 			return;
 		}
 
-		tile.getElementById('national-id').text = `#${pkm.nationalId}`;
 		tile.getElementById('name').text = pkm.name;
 		const type1 = typeComponent(tile.getElementById('type-1'));
 		const type2 = typeComponent(tile.getElementById('type-2'));
