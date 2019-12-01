@@ -7,6 +7,10 @@
 		"@fitbit/sdk": "^4.0.1",
 		"@fitbit/sdk-cli": "^1.7.0",
 		"@types/node": "^12.12.14",
+		"@typescript-eslint/eslint-plugin": "^2.9.0",
+		"@typescript-eslint/parser": "^2.9.0",
+		"eslint": "^6.7.2",
+		"eslint-config-prettier": "^6.7.0",
 		"fitbit-sdk-types": "^4.2.0",
 		"prettier": "^1.19.1"
 	},
@@ -37,8 +41,9 @@
 		"build": "fitbit-build",
 		"debug": "fitbit",
 		"prettier": "prettier **/*.ts **/*.mjs **/*.json **/*.md **/*.gui",
-		"check-code": "npm run prettier -- --check",
-		"fix-code": "npm run prettier -- --write",
+		"lint": "eslint --max-warnings 0 app/**/*.ts",
+		"check-code": "npm run lint && npm run prettier -- --check",
+		"fix-code": " npm run lint -- --fix && npm run prettier -- --write",
 		"update:resources": "node --experimental-modules --es-module-specifier-resolution=node scripts/update-resources.mjs",
 		"postinstall": "npm run update:resources"
 	},
