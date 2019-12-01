@@ -1,0 +1,17 @@
+<svg>
+	<symbol id="stat">
+            <text
+				x="50%-3"
+				id="name"
+				font-size="24"
+				text-length="15"
+				text-anchor="end"
+			/>
+			<text
+				x="50%+3"
+				id="value"
+				font-size="28"
+				text-length="3"
+			/>
+	</symbol>
+</svg>

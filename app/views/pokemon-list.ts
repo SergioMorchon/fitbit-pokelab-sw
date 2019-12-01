@@ -28,7 +28,7 @@ export default (options: Options = { listIndex: 0 }) => {
 			}
 
 			tile.getElementById('name').text = pkm.name;
-			types(tile.getElementById('types')).types = pkm.types;
+			types(tile.getElementById('types'), pkm.types);
 			tile.getElementById('touch').onclick = () => {
 				import('./pokemon-details').then(m => {
 					m.default({ pkm, listIndex });

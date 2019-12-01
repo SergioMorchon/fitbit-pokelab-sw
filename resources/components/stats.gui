@@ -1,0 +1,15 @@
+<svg>
+    <defs>
+        <link rel="import" href="stat.gui" />
+    </defs>
+	<symbol id="stats">
+        <g transform="translate(0, -125)">
+        <use href="#stat" id="0" y="0" />
+        <use href="#stat" id="1" y="25" />
+        <use href="#stat" id="2" y="50" />
+        <use href="#stat" id="3" y="75" />
+        <use href="#stat" id="4" y="100" />
+        <use href="#stat" id="5" y="125" />
+      </g>
+	</symbol>
+</svg>

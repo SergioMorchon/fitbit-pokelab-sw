@@ -22,18 +22,18 @@ const colors = [
 	'#D685AD',
 ];
 
-export default (element: Element) => {
+export default (element: Element, type: number | void) => {
 	const square = byId('square', element) as RectElement;
 	const text = byId('text', element) as TextElement;
-	return {
-		set type(value: number) {
-			square.style.fill = colors[value];
-			text.text = getTypeName(value);
-		},
-		set isVisible(value: boolean) {
-			const visibility = value ? 'visible' : 'hidden';
-			square.style.visibility = visibility;
-			text.style.visibility = visibility;
-		},
-	};
+
+	if (typeof type !== 'number') {
+		square.style.visibility = 'hidden';
+		text.style.visibility = 'hidden';
+		return;
+	}
+
+	square.style.visibility = 'visible';
+	text.style.visibility = 'visible';
+	square.style.fill = colors[type];
+	text.text = getTypeName(type);
 };
