@@ -1,8 +1,7 @@
-import { loadUI } from "../ui";
-import document from "document";
+import { loadUI, byId } from '../ui';
 
-loadUI("main");
+loadUI('main');
 
-document.getElementById("pokedex").onclick = () => {
-  import("./pokemon-list");
+byId('pokedex').onclick = () => {
+	import('./pokemon-list');
 };

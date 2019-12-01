@@ -1,1 +1,1 @@
-import('./views/pokemon-list');
+import('./views/pokemon-list').then(m => m.default());

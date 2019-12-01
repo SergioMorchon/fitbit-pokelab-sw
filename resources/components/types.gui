@@ -1,0 +1,9 @@
+<svg>
+    <defs>
+        <link rel="import" href="type.gui" />
+    </defs>
+	<symbol id="types">
+      <use href="#type" id="type-1" x="6" />
+      <use href="#type" id="type-2" x="50%" />
+	</symbol>
+</svg>

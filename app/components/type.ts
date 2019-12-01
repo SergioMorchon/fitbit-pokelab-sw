@@ -1,4 +1,5 @@
 import { getTypeName } from '../types';
+import { byId } from '../ui';
 
 const colors = [
 	'#A8A77A',
@@ -22,15 +23,10 @@ const colors = [
 ];
 
 export default (element: Element) => {
-	let type = NaN;
-	const square = element.getElementById('square') as RectElement;
-	const text = element.getElementById('text') as TextElement;
+	const square = byId('square', element) as RectElement;
+	const text = byId('text', element) as TextElement;
 	return {
-		get type(): number {
-			return type;
-		},
 		set type(value: number) {
-			type = value;
 			square.style.fill = colors[value];
 			text.text = getTypeName(value);
 		},
