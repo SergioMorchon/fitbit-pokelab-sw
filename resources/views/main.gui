@@ -1,5 +1,8 @@
 <svg>
-	<rect id="pokedex" class="main-nav-button" pointer-events="visible">
-		<text>_Pokedex</text>
-	</rect>
+	<use id="galar-pokedex" href="#square-button-neutral" y="6">
+		<set href="#text" attributeName="text-buffer" to="_galar-pokedex" />
+	</use>
+	<use id="full-pokedex" href="#square-button-neutral" y="$">
+		<set href="#text" attributeName="text-buffer" to="_full-pokedex" />
+	</use>
 </svg>

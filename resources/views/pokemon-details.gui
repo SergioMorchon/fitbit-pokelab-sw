@@ -17,7 +17,7 @@
 	<use href="#scrollview">
 		<!-- Main section -->
 		<use href="#view-header" id="main-header" height="60" />
-		<use href="#scrollview-item" height="240">
+		<use href="#scrollview-item" height="100%-60">
 			<g>
 				<use href="#types" id="types" y="6" />
 				<use href="#stats" id="stats" y="75" />

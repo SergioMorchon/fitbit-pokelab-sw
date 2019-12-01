@@ -1,15 +1,19 @@
-import pokemonStats, { PokemonStats } from '../pokemon-stats';
-import handleBack from './handle-back';
-import { loadUI, byId } from '../ui';
+import pokemonStats, { PokemonStats, getGalarIndex } from '../pokemon-stats';
+import { loadUI, byId, handleBack } from '../ui';
 import types from '../components/types';
 
 loadUI('pokemon-list');
 
 type Options = {
 	listIndex: number;
+	indexType: 'full' | 'galar';
 };
 
-export default (options: Options = { listIndex: 0 }) => {
+export default (options: Options = { listIndex: 0, indexType: 'full' }) => {
+	const customIndex = options.indexType === 'galar' ? getGalarIndex() : null;
+	const getPkm = customIndex
+		? (index: number) => pokemonStats.get(customIndex.get(index))
+		: (index: number) => pokemonStats.get(index);
 	const VTList = byId('my-list') as VirtualTileList<{
 		type: 'pokemon-list';
 		pkm: PokemonStats;
@@ -19,7 +23,7 @@ export default (options: Options = { listIndex: 0 }) => {
 	VTList.delegate = {
 		getTileInfo: index => ({
 			type: 'pokemon-list',
-			pkm: pokemonStats.get(index),
+			pkm: getPkm(index),
 			listIndex: index,
 		}),
 		configureTile: (tile, { type, pkm, listIndex }) => {
@@ -31,19 +35,18 @@ export default (options: Options = { listIndex: 0 }) => {
 			types(tile.getElementById('types'), pkm.types);
 			tile.getElementById('touch').onclick = () => {
 				import('./pokemon-details').then(m => {
-					m.default({ pkm, listIndex });
+					m.default({ pkm, listIndex, indexType: options.indexType });
 				});
 			};
 		},
 	};
 
-	VTList.length = pokemonStats.length;
+	VTList.length = (customIndex || pokemonStats).length;
 	if (options.listIndex) {
 		VTList.value = options.listIndex;
 	}
-	/*
+
 	handleBack(() => {
 		import('./main');
 	});
-	*/
 };

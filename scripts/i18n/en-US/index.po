@@ -1,2 +1,5 @@
-msgid "Pokedex"
-msgstr "Pokedex"
+msgid "galar-pokedex"
+msgstr "Galar Pokédex"
+
+msgid "full-pokedex"
+msgstr "Full Pokédex"

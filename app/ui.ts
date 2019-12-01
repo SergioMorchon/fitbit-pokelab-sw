@@ -11,3 +11,12 @@ export const byId = (id: string, root: ElementSearch = document) => {
 
 	return element;
 };
+
+export const handleBack = (onBack: () => void) => {
+	document.onkeypress = e => {
+		if (e.key === 'back') {
+			onBack();
+			e.preventDefault();
+		}
+	};
+};
