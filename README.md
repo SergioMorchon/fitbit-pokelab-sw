@@ -13,12 +13,12 @@
 
 ### Main
 
-![Main](./doc/en/versa/main.png)
+![Main](./doc/en/versa/0-main.png)
 
 ### Pokémon list
 
-![Main](./doc/en/versa/pokemon-list.png)
+![Main](./doc/en/versa/1-pokemon-list.png)
 
 ### Pokémon details
 
-![Main](./doc/en/versa/pokemon-details.png)
+![Main](./doc/en/versa/2-pokemon-details.png)
