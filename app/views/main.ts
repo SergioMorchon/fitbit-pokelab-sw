@@ -1,15 +1,18 @@
 import { loadUI, byId } from '../ui';
+import { PokedexType, clearNavigationState } from '../local-state';
 
 loadUI('main');
+clearNavigationState();
 
-const loadPokemonList = (indexType: 'full' | 'galar') =>
-	import('./pokemon-list').then(m =>
-		m.default({
-			indexType,
-			listIndex: 0,
-		}),
-	);
-
+const loadPokemonList = (pokedexType: PokedexType) =>
+	import('./pokemon-list')
+		.then(m =>
+			m.default({
+				pokedexType: pokedexType,
+				startIndex: 0,
+			}),
+		)
+		.catch(e => console.error(e));
 byId('galar-pokedex').onclick = () => {
 	loadPokemonList('galar');
 };
