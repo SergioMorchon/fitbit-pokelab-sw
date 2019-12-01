@@ -8,7 +8,7 @@
   "endOfLine": "lf",
   "overrides": [
     {
-      "files": ["*.gui", "*.svg"],
+      "files": ["*.gui"],
       "options": {
         "parser": "html"
       }

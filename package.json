@@ -36,6 +36,9 @@
 	"scripts": {
 		"build": "fitbit-build",
 		"debug": "fitbit",
+		"prettier": "prettier **/*.ts **/*.tsx **/*.json **/*.md **/*.gui",
+		"check-code": "npm run prettier -- --check",
+		"fix-code": "npm run prettier -- --write",
 		"update:resources": "node --experimental-modules scripts/update-resources.mjs",
 		"postinstall": "npm run update:resources"
 	},
