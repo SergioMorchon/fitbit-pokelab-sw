@@ -32,7 +32,13 @@ export default (state: PokemonListViewState) => {
 			types(byId('types', tile), pkm.types);
 			byId('touch', tile).onclick = () => {
 				import('./pokemon-details').then(m => {
-					m.default({ pokedexType: state.pokedexType, pokemonIndex: index });
+					m.default({
+						pkm,
+						previousState: {
+							pokedexType: state.pokedexType,
+							startIndex: index,
+						},
+					});
 				});
 			};
 		},

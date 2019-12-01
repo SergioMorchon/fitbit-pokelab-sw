@@ -10,19 +10,11 @@ interface PokedexView {
 export interface PokemonListViewState extends PokedexView {
 	startIndex: number;
 }
-export interface PokemonDetailsViewState extends PokedexView {
-	pokemonIndex: number;
-}
 
-export type NavigationState =
-	| {
-			view: 'pokemon-list';
-			state: PokemonListViewState;
-	  }
-	| {
-			view: 'pokemon-details';
-			state: PokemonDetailsViewState;
-	  };
+export type NavigationState = {
+	view: 'pokemon-list';
+	state: PokemonListViewState;
+};
 
 const navigationStateFileName = 'navigation-state';
 
