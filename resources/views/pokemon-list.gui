@@ -10,8 +10,8 @@
 			system-events="all"
 			display="none"
 		>
-			<text id="name" x="6" text-length="15" font-size="48" />
-			<use href="#types" id="types" y="100" />
+			<text id="name" x="6" y="52" text-length="15" font-size="48" />
+			<use href="#types" id="types" y="65" />
 
 			<rect id="tile-divider-bottom" class="tile-divider-bottom" />
 			<rect

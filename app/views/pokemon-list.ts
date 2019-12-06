@@ -6,10 +6,6 @@ import { PokemonListViewState, setNavigationState } from '../local-state';
 loadUI('pokemon-list');
 
 export default (state: PokemonListViewState) => {
-	setNavigationState({
-		view: 'pokemon-list',
-		state,
-	});
 	const stats = pokemonStats(state.pokedexType);
 	const VTList = byId('my-list') as VirtualTileList<{
 		type: 'pokemon-list';
@@ -31,6 +27,13 @@ export default (state: PokemonListViewState) => {
 			byId('name', tile).text = pkm.name;
 			types(byId('types', tile), pkm.types);
 			byId('touch', tile).onclick = () => {
+				setNavigationState({
+					view: 'pokemon-list',
+					state: {
+						pokedexType: state.pokedexType,
+						startIndex: index,
+					},
+				});
 				import('./pokemon-details').then(m => {
 					m.default({
 						pkm,
