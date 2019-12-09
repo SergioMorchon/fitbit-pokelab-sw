@@ -1,12 +1,34 @@
 import pokemonStats, { PokemonStats } from '../pokemon-stats';
-import { loadUI, byId, handleBack } from '../ui';
+import { loadUI, byId } from '../ui';
 import types from '../components/types';
-import { PokemonListViewState, setNavigationState } from '../local-state';
+import { writeFileSync, existsSync, readFileSync } from 'fs';
+import { encode, decode } from 'cbor';
+
+const stateFileName = 'pokemon-list-state';
+
+type Options = {
+	startIndex: number;
+};
+
+const saveState = (state: Options) => {
+	writeFileSync(stateFileName, encode(state));
+};
+
+const loadState = (): Options | void => {
+	if (!existsSync(stateFileName)) {
+		return;
+	}
+
+	return decode(readFileSync(stateFileName));
+};
 
 loadUI('pokemon-list');
 
-export default (state: PokemonListViewState) => {
-	const stats = pokemonStats(state.pokedexType);
+export default () => {
+	const state = loadState() || {
+		startIndex: 0,
+	};
+	const stats = pokemonStats();
 	const VTList = byId('my-list') as VirtualTileList<{
 		type: 'pokemon-list';
 		pkm: PokemonStats;
@@ -27,20 +49,12 @@ export default (state: PokemonListViewState) => {
 			byId('name', tile).text = pkm.name;
 			types(byId('types', tile), pkm.types);
 			byId('touch', tile).onclick = () => {
-				setNavigationState({
-					view: 'pokemon-list',
-					state: {
-						pokedexType: state.pokedexType,
-						startIndex: index,
-					},
+				saveState({
+					startIndex: index,
 				});
 				import('./pokemon-details').then(m => {
 					m.default({
 						pkm,
-						previousState: {
-							pokedexType: state.pokedexType,
-							startIndex: index,
-						},
 					});
 				});
 			};
@@ -51,8 +65,4 @@ export default (state: PokemonListViewState) => {
 	if (state.startIndex) {
 		VTList.value = state.startIndex;
 	}
-
-	handleBack(() => {
-		import('./main').catch(e => console.error(e));
-	});
 };

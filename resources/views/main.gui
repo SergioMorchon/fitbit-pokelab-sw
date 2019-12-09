@@ -1,5 +1,0 @@
-<svg>
-	<use id="galar-pokedex" href="#square-button-neutral" y="6">
-		<set href="#text" attributeName="text-buffer" to="_galar-pokedex" />
-	</use>
-</svg>
