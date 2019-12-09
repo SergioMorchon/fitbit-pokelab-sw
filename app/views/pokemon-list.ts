@@ -46,6 +46,7 @@ export default () => {
 				return;
 			}
 
+			byId('number', tile).text = `#${pkm.galarId}`;
 			byId('name', tile).text = pkm.name;
 			types(byId('types', tile), pkm.types);
 			byId('touch', tile).onclick = () => {
