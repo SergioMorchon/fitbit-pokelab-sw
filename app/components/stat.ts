@@ -1,4 +1,4 @@
-import { getStatName } from '../stats';
+import { getStatName } from '../strings';
 import { byId } from '../ui';
 
 export default (

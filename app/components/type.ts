@@ -1,4 +1,4 @@
-import { getTypeName } from '../types';
+import { getTypeName } from '../strings';
 import { byId } from '../ui';
 
 const colors = [
