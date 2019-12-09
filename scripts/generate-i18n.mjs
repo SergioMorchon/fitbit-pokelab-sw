@@ -28,17 +28,17 @@ const getStats = locale =>
 		{},
 	);
 
-const getPokemonNames = () =>
-	getLines(join(dataPath, 'pokemon-names-en.txt'), 'utf-8').reduce(
-		(acc, name, index) => {
-			acc[`pkm_${index}`] = name;
-			return acc;
-		},
-		{},
-	);
+const getPokemonNames = locale =>
+	getLines(
+		join(scriptsPath, 'i18n', locale, 'pokemon-names.txt'),
+		'utf-8',
+	).reduce((acc, name, index) => {
+		acc[`pkm_${index}`] = name;
+		return acc;
+	}, {});
 
 const getTokens = locale => ({
-	...getPokemonNames(),
+	...getPokemonNames(locale),
 	...getTypes(locale),
 	...getStats(locale),
 });

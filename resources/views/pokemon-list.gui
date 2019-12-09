@@ -10,7 +10,14 @@
 			system-events="all"
 			display="none"
 		>
-			<text id="number" x="6" y="46" text-length="4" font-size="32" fill="#F80070" />
+			<text
+				id="number"
+				x="6"
+				y="46"
+				text-length="4"
+				font-size="32"
+				fill="#F80070"
+			/>
 			<text id="name" x="$+6" y="50" text-length="15" font-size="44" />
 			<use href="#types" id="types" y="65" />
 

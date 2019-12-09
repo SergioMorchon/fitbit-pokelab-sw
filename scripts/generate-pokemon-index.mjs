@@ -17,43 +17,55 @@ const stats = pokemonStats(
 );
 
 const pokemonToSkip = new Set([
-	'Pikachu 1',
-	'Pikachu 2',
-	'Pikachu 3',
-	'Pikachu 4',
-	'Pikachu 5',
-	'Pikachu 6',
-	'Pikachu 7',
-	'Rotom 1',
-	'Rotom 2',
-	'Rotom 3',
-	'Rotom 4',
-	'Rotom 5',
-	'Silvally 1',
-	'Silvally 2',
-	'Silvally 3',
-	'Silvally 4',
-	'Silvally 5',
-	'Silvally 6',
-	'Silvally 7',
-	'Silvally 8',
-	'Silvally 9',
-	'Silvally 10',
-	'Silvally 11',
-	'Silvally 12',
-	'Silvally 13',
-	'Silvally 14',
-	'Silvally 15',
-	'Silvally 16',
-	'Silvally 17',
-	'Alcremie 1',
-	'Alcremie 2',
-	'Alcremie 3',
-	'Alcremie 4',
-	'Alcremie 5',
-	'Alcremie 6',
-	'Alcremie 7',
-	'Alcremie 8',
+	'Pikachu 1', // egg group changes (undiscovered)
+	'Pikachu 2', // egg group changes (undiscovered)
+	'Pikachu 3', // egg group changes (undiscovered)
+	'Pikachu 4', // egg group changes (undiscovered)
+	'Pikachu 5', // egg group changes (undiscovered)
+	'Pikachu 6', // egg group changes (undiscovered)
+	'Pikachu 7', // egg group changes (undiscovered)
+	'Shellos 1', // color changes
+	'Gastrodon 1', // color changes
+	'Basculin 1', // ability changes
+	'Meowstic 1', // changes color
+	'Rotom 1', // type changes by form
+	'Rotom 2', // type changes by form
+	'Rotom 3', // type changes by form
+	'Rotom 4', // type changes by form
+	'Rotom 5', // type changes by form
+	'Silvally 1', // type changes by object
+	'Silvally 2', // type changes by object
+	'Silvally 3', // type changes by object
+	'Silvally 4', // type changes by object
+	'Silvally 5', // type changes by object
+	'Silvally 6', // type changes by object
+	'Silvally 7', // type changes by object
+	'Silvally 8', // type changes by object
+	'Silvally 9', // type changes by object
+	'Silvally 10', // type changes by object
+	'Silvally 11', // type changes by object
+	'Silvally 12', // type changes by object
+	'Silvally 13', // type changes by object
+	'Silvally 14', // type changes by object
+	'Silvally 15', // type changes by object
+	'Silvally 16', // type changes by object
+	'Silvally 17', // type changes by object
+	'Mimikyu 1', // apparently no changes
+	'Cramorant 1', // apparently no changes
+	'Cramorant 2', // apparently no changes
+	'Toxtricity 1', // ability changes
+	'Sinistea 1', // apparently no changes
+	'Polteageist 1', // apparently no changes
+	'Morpeko 1', // apparently no changes
+	'Alcremie 1', // color changes
+	'Alcremie 2', // color changes
+	'Alcremie 3', // color changes
+	'Alcremie 4', // color changes
+	'Alcremie 5', // color changes
+	'Alcremie 6', // color changes
+	'Alcremie 7', // color changes
+	'Alcremie 8', // color changes
+	'Eternatus 1', // ?
 ]);
 
 const galarIndex = new Map();
