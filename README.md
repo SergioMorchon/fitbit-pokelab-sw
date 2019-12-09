@@ -11,14 +11,10 @@
 
 ## Screenshots
 
-### Main
-
-![Main](./doc/en/versa/0-main.png)
-
 ### Pokémon list
 
-![Main](./doc/en/versa/1-pokemon-list.png)
+![Pokémon list](./doc/en/versa/0-pokemon-list.png)
 
 ### Pokémon details
 
-![Main](./doc/en/versa/2-pokemon-details.png)
+![Pokémon details](./doc/en/versa/1-pokemon-details.png)
