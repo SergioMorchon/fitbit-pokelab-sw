@@ -6,3 +6,15 @@ text {
 .tile-list-item {
 	height: 100;
 }
+
+#selector {
+	y: 50%-55;
+}
+#selector .item {
+	height: 90;
+}
+#selector .item text {
+	font-size: 80;
+	x: 50%;
+	text-anchor: middle;
+}

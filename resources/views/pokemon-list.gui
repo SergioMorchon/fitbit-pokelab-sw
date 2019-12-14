@@ -1,6 +1,7 @@
 <svg>
 	<defs>
 		<link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.gui" />
+		<link rel="import" href="/mnt/sysassets/widgets/combo_button_widget.gui" />
 
 		<link rel="import" href="../components/types.gui" />
 		<symbol
@@ -49,5 +50,10 @@
 			<use id="pokemon-list[8]" href="#tile-item" class="tile-list-item" />
 			<use id="pokemon-list[9]" href="#tile-item" class="tile-list-item" />
 		</use>
+	</use>
+	<use id="select-number-button" href="#combo-button-lower-right" fill="white">
+		<set href="combo-button-icon" attributeName="href" to="btn_combo_skip_forward_p.png"/>
+		<set href="combo-button-icon-press" attributeName="href" to="btn_combo_skip_forward_press_p.png"/>
+		<set href="combo-button-stroke" attributeName="display" to="inline"/>
 	</use>
 </svg>

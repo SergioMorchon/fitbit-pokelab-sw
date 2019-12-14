@@ -1,0 +1,38 @@
+<svg>
+  <defs>
+    <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/tumblerview_widget.gui" />
+  </defs>
+  <use id="selector" href="#tumblerview">
+    <use href="#tumbler-item" class="item">
+      <text id="0"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="1"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="2"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="3"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="4"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="5"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="6"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="7"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="8"></text>
+    </use>
+    <use href="#tumbler-item" class="item">
+      <text id="9"></text>
+    </use>
+  </use>
+</svg>

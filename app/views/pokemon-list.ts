@@ -60,6 +60,29 @@ VTList.delegate = {
 };
 
 VTList.length = stats.length;
-if (state.startIndex) {
-	VTList.value = state.startIndex;
-}
+
+(byId('select-number-button') as ComboButton).onactivate = () => {
+	import('./selector')
+		.then(m => {
+			const numberOfOptions = 10;
+			const options: import('./selector').Option[] = [];
+			for (let i = 0; i < numberOfOptions; i++) {
+				let value = 0;
+				if (i === numberOfOptions - 1) {
+					value = stats.length - 1;
+				} else if (i > 0) {
+					value = Math.floor((i * stats.length) / numberOfOptions);
+				}
+				options.push({
+					value,
+					text: String(stats.get(value).galarId),
+				});
+			}
+			m.default(options);
+		})
+		.catch(e => console.error(e));
+};
+
+export default (startIndex: number = state.startIndex) => {
+	VTList.value = startIndex;
+};
