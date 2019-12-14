@@ -85,4 +85,9 @@ VTList.length = stats.length;
 
 export default (startIndex: number = state.startIndex) => {
 	VTList.value = startIndex;
+	if (startIndex !== state.startIndex) {
+		saveState({
+			startIndex,
+		});
+	}
 };

@@ -52,8 +52,16 @@
 		</use>
 	</use>
 	<use id="select-number-button" href="#combo-button-lower-right" fill="white">
-		<set href="combo-button-icon" attributeName="href" to="btn_combo_skip_forward_p.png"/>
-		<set href="combo-button-icon-press" attributeName="href" to="btn_combo_skip_forward_press_p.png"/>
-		<set href="combo-button-stroke" attributeName="display" to="inline"/>
+		<set
+			href="combo-button-icon"
+			attributeName="href"
+			to="btn_combo_skip_forward_p.png"
+		/>
+		<set
+			href="combo-button-icon-press"
+			attributeName="href"
+			to="btn_combo_skip_forward_press_p.png"
+		/>
+		<set href="combo-button-stroke" attributeName="display" to="inline" />
 	</use>
 </svg>
