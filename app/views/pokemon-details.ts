@@ -14,8 +14,6 @@ export default ({ pkm }: Options) => {
 	types(byId('types'), pkm.types);
 	stats(byId('stats'), pkm.baseStats);
 	handleBack(() => {
-		import('./pokemon-list')
-			.then(m => m.default())
-			.catch(e => console.error(e));
+		import('./pokemon-list').catch(e => console.error(e));
 	});
 };

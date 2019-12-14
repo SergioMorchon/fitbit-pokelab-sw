@@ -1,18 +1,26 @@
-/**
- * Use this only for development.
- * Just import it and watch for memory leaks while navigating.
- */
-import { memory } from 'system';
+import { memory, MemoryUsage } from 'system';
 
-const logMemory = () => {
+const proportion = (v1: number, v2: number) => Number((v1 / v2).toFixed(2));
+
+let lastMemoryUsage: MemoryUsage | void;
+
+const diffLastMemoryUsage = (memoryUsage: MemoryUsage) =>
+	lastMemoryUsage ? memoryUsage.used - lastMemoryUsage.used : NaN;
+
+export const logMemory = (message = 'Memory') => {
+	const memoryUsage = {
+		used: memory.js.used,
+		total: memory.js.total,
+		peak: memory.js.peak,
+	};
 	console.log(
-		`Memory usage: ${(memory.js.used / memory.js.total).toFixed(2)}, peak ${(
-			memory.js.peak / memory.js.total
-		).toFixed(2)}`,
-		`Memory pressure: ${memory.monitor.pressure}`,
+		`${message}: ${proportion(
+			memoryUsage.used,
+			memory.js.total,
+		)} (${diffLastMemoryUsage(memoryUsage)}B), peak ${proportion(
+			memoryUsage.peak,
+			memoryUsage.total,
+		)}, pressure ${memory.monitor.pressure}`,
 	);
+	lastMemoryUsage = memoryUsage;
 };
-
-setInterval(logMemory, 2000);
-
-memory.monitor.onmemorypressurechange = logMemory;

@@ -1,9 +1,10 @@
 <svg>
 	<defs>
-		<link rel="import" href="../components/types.gui" />
+		<link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.gui" />
 
+		<link rel="import" href="../components/types.gui" />
 		<symbol
-			id="my-tile-item"
+			id="tile-item"
 			href="#tile-list-item"
 			focusable="false"
 			pointer-events="none"
@@ -33,20 +34,20 @@
 			/>
 		</symbol>
 	</defs>
-	<use id="my-list" href="#tile-list">
+	<use id="list" href="#tile-list">
 		<var id="virtual" value="1" />
 		<var id="separator-height-bottom" value="2" />
 		<use id="pokemon-list" href="#tile-list-pool">
-			<use id="pokemon-list[0]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[1]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[2]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[3]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[4]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[5]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[6]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[7]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[8]" href="#my-tile-item" class="tile-list-item" />
-			<use id="pokemon-list[9]" href="#my-tile-item" class="tile-list-item" />
+			<use id="pokemon-list[0]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[1]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[2]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[3]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[4]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[5]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[6]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[7]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[8]" href="#tile-item" class="tile-list-item" />
+			<use id="pokemon-list[9]" href="#tile-item" class="tile-list-item" />
 		</use>
 	</use>
 </svg>

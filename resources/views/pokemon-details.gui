@@ -1,5 +1,8 @@
 <svg>
 	<defs>
+		<link rel="import" href="/mnt/sysassets/widgets/baseview_widget.gui" />
+		<link rel="import" href="/mnt/sysassets/widgets/scrollview_widget.gui" />
+
 		<link rel="import" href="../components/types.gui" />
 		<link rel="import" href="../components/stats.gui" />
 		<symbol id="view-header" href="#scrollview-header">

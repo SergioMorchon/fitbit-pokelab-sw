@@ -5,13 +5,13 @@
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"@fitbit/sdk": "^4.0.1",
-		"@fitbit/sdk-cli": "^1.7.0",
-		"@types/node": "^12.12.14",
-		"@typescript-eslint/eslint-plugin": "^2.9.0",
-		"@typescript-eslint/parser": "^2.9.0",
+		"@fitbit/sdk-cli": "^1.7.1",
+		"@types/node": "^12.12.17",
+		"@typescript-eslint/eslint-plugin": "^2.11.0",
+		"@typescript-eslint/parser": "^2.11.0",
 		"eslint": "^6.7.2",
 		"eslint-config-prettier": "^6.7.0",
-		"fitbit-sdk-types": "^4.2.0",
+		"fitbit-sdk-types": "^4.2.2",
 		"prettier": "^1.19.1"
 	},
 	"fitbit": {
@@ -48,6 +48,6 @@
 		"postinstall": "npm run update:resources"
 	},
 	"dependencies": {
-		"pokelab-sw": "^1.0.5"
+		"pokelab-swsh": "^1.0.5"
 	}
 }

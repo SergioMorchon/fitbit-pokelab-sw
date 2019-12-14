@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
-import { appPath, dataPath, scriptsPath } from './constants.mjs';
+import { appPath, scriptsPath } from './constants.mjs';
 import { join } from 'path';
 
 const locales = Object.keys(

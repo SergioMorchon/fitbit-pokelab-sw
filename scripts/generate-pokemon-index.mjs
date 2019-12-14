@@ -1,5 +1,5 @@
 import { dataPath } from './constants.mjs';
-import pokemonStats from 'pokelab-sw/dist/pokemon-stats.js';
+import pokemonStats from 'pokelab-swsh/dist/pokemon-stats.js';
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { resourcesPath } from './constants.mjs';
@@ -10,7 +10,7 @@ const names = readFileSync(
 ).split('\n');
 
 const stats = pokemonStats(
-	readFileSync(join(dataPath, 'pokemon-stats')).buffer,
+	new Uint8Array(readFileSync(join(dataPath, 'pokemon-stats')).buffer),
 	{
 		getName: index => names[index],
 	},

@@ -1,28 +1,35 @@
-import pokemonStats, { PokemonStats } from 'pokelab-sw/dist/pokemon-stats';
-import dataView from 'pokelab-sw/dist/data-view';
+import pokemonStats, { PokemonStats } from 'pokelab-swsh/dist/pokemon-stats';
+import { getUint16 } from 'pokelab-swsh/dist/data-view';
 import { readFileSync } from 'fs';
-import { gettext } from 'i18n';
+import { getPokemonName } from './strings';
 
 export { PokemonStats };
 
+const stats = pokemonStats(
+	new Uint8Array(readFileSync('./resources/data/pokemon-stats')),
+	{
+		getName: getPokemonName,
+		getDescription: () => '',
+	},
+);
+
 const getGalarIndex = () => {
-	const buffer = readFileSync('./resources/data/pokemon-stats-galar-index');
-	const data = dataView(buffer, 0);
-	const length = buffer.byteLength / 2;
+	const data = new Uint8Array(
+		readFileSync('./resources/data/pokemon-stats-galar-index'),
+	);
+	const length = data.length / 2;
 	return {
-		get: (index: number) => data.getUint16(index * 2),
+		get: (index: number) => getUint16(data, index * 2),
 		length,
 	};
 };
 
-export default (): { get: (index: number) => PokemonStats; length: number } => {
-	const stats = pokemonStats(readFileSync('./resources/data/pokemon-stats'), {
-		getName: id => gettext(`pkm_${id}`),
-		getDescription: () => '',
-	});
-	const galarIndex = getGalarIndex();
-	return {
-		get: index => stats.get(galarIndex.get(index)),
-		length: galarIndex.length,
-	};
-};
+const indexes = getGalarIndex();
+
+export default (): {
+	get: (index: number) => PokemonStats;
+	length: number;
+} => ({
+	get: index => stats.get(indexes.get(index)),
+	length: indexes.length,
+});

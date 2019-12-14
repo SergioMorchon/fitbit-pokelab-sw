@@ -3,7 +3,7 @@ import { join } from 'path';
 export const dataPath = join(
 	process.cwd(),
 	'node_modules',
-	'pokelab-sw',
+	'pokelab-swsh',
 	'dist',
 	'data',
 );
