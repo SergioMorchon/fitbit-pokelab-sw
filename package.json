@@ -4,14 +4,14 @@
 	"private": true,
 	"license": "UNLICENSED",
 	"devDependencies": {
-		"@fitbit/sdk": "^4.0.1",
+		"@fitbit/sdk": "^4.1.0",
 		"@fitbit/sdk-cli": "^1.7.1",
-		"@types/node": "^12.12.17",
-		"@typescript-eslint/eslint-plugin": "^2.11.0",
-		"@typescript-eslint/parser": "^2.11.0",
-		"eslint": "^6.7.2",
-		"eslint-config-prettier": "^6.7.0",
-		"fitbit-sdk-types": "^4.2.2",
+		"@types/node": "^12.12.22",
+		"@typescript-eslint/eslint-plugin": "^2.13.0",
+		"@typescript-eslint/parser": "^2.13.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.8.0",
+		"fitbit-sdk-types": "^4.3.2",
 		"prettier": "^1.19.1"
 	},
 	"fitbit": {
@@ -38,14 +38,13 @@
 		"defaultLanguage": "en-US"
 	},
 	"scripts": {
-		"build": "fitbit-build",
+		"build": "npm run update:resources && fitbit-build",
 		"debug": "fitbit",
 		"prettier": "prettier **/*.ts **/*.mjs **/*.json **/*.md **/*.gui",
 		"lint": "eslint --max-warnings 0 app/**/*.ts",
 		"check-code": "npm run lint && npm run prettier -- --check",
 		"fix-code": " npm run lint -- --fix && npm run prettier -- --write",
-		"update:resources": "node --experimental-modules --es-module-specifier-resolution=node scripts/update-resources.mjs",
-		"postinstall": "npm run update:resources"
+		"update:resources": "node --experimental-modules --es-module-specifier-resolution=node scripts/update-resources.mjs"
 	},
 	"dependencies": {
 		"pokelab-swsh": "^1.0.5"

@@ -21,10 +21,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
-      - run: npm ci
-      - run: npm run check-code
-      - run: npm run build
-      - uses: actions/upload-artifact@master
+      - name: Install
+        run: npm ci
+      - name: Code style
+        run: npm run check-code
+      - name: Build
+        run: npm run build
+        uses: actions/upload-artifact@master
         with:
           name: build
           path: build
