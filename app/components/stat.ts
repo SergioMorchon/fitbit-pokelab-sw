@@ -1,19 +1,18 @@
-import { getStatName } from '../strings';
 import { byId } from '../ui';
 
 export default (
 	element: Element,
-	stat: number,
+	statName: string,
 	value: number,
-	relativeValue: number,
+	relativeValue?: number,
 ) => {
 	const nameElement = byId('name', element) as TextElement;
-	nameElement.text = getStatName(stat);
+	nameElement.text = statName;
 
 	const valueElement = byId('value', element) as TextElement;
 	valueElement.text = String(value);
 
-	if (relativeValue !== 0) {
+	if (typeof relativeValue === 'number' && relativeValue !== 0) {
 		const fill = relativeValue > 0 ? '#9fb' : '#f99';
 		nameElement.style.fill = fill;
 		valueElement.style.fill = fill;

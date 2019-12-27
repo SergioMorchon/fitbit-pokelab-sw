@@ -1,0 +1,2 @@
+msgid "stats-total"
+msgstr "Total"
