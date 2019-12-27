@@ -27,7 +27,7 @@ jobs:
         run: npm run check-code
       - name: Build
         run: npm run build
-        uses: actions/upload-artifact@master
+      - uses: actions/upload-artifact@master
         with:
           name: build
           path: build
