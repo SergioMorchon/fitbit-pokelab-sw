@@ -1,0 +1,6 @@
+PS
+Attacco
+Difesa
+Att. Sp.
+Dif. Sp.
+Velocità
